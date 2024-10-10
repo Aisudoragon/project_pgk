@@ -25,10 +25,12 @@ func _physics_process(delta: float) -> void:
 				$AnimatedSprite2D.flip_h = true
 			else:
 				$AnimatedSprite2D.flip_h = false
+		$Camera2D.offset.x = 50 * direction
 	else:
 		if is_on_floor():
 			velocity.x = move_toward(velocity.x, 0, SPEED)
 			$AnimatedSprite2D.stop()
+			
 
 
 

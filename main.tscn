@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=4 uid="uid://ceeu0nvl3i6ys"]
+[gd_scene load_steps=9 format=4 uid="uid://ceeu0nvl3i6ys"]
 
 [ext_resource type="Script" path="res://player.gd" id="2_licbq"]
 [ext_resource type="Texture2D" uid="uid://bubwkcsblsvyo" path="res://sprite/spr1_tran.png" id="2_q8kdv"]
 [ext_resource type="Texture2D" uid="uid://dti3tfs8sctdt" path="res://sprite/spr2_tran.png" id="3_oeggl"]
 [ext_resource type="Texture2D" uid="uid://b54cf00wy4vfp" path="res://sprite/spr3_tran.png" id="4_r04i3"]
 [ext_resource type="TileSet" uid="uid://bx7xcuoqh1rkm" path="res://new_tile_set.tres" id="5_0oevo"]
+[ext_resource type="AudioStream" uid="uid://b3227ik8ttal6" path="res://music/mad_forest.ogg" id="6_r0lfw"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_2q18i"]
 animations = [{
@@ -50,4 +51,11 @@ sprite_frames = SubResource("SpriteFrames_2q18i")
 shape = SubResource("RectangleShape2D_gfmkd")
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
-zoom = Vector2(3, 3)
+offset = Vector2(50, 0)
+limit_top = 100
+limit_bottom = 150
+position_smoothing_speed = 1.0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_r0lfw")
+autoplay = true
