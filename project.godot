@@ -34,6 +34,11 @@ Jump={
 ]
 }
 
+[physics]
+
+2d/default_gravity=540.0
+
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
+environment/defaults/default_clear_color=Color(0, 0, 0, 1)
